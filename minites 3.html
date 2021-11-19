@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--          //bài 1-->
+<!--<script>-->
+<!--    let number = +prompt("nhập vào số lượng");-->
+<!--    let arr = new Array(number);-->
+
+<!--    for (let i = 0; i < arr.length; i++) {-->
+<!--        arr[i] = +prompt("nhập vào các phần tử" + ( i + 1));-->
+<!--        if (arr[i] %3 === 0){-->
+<!--            document.write("số " + arr[i] +"<br>")-->
+<!--        }-->
+<!--    }-->
+
+<!--    function Arr(arr) {-->
+<!--        if(arr.length %3 != 0)-->
+<!--            return -1;-->
+<!--    }-->
+<!--</script>-->
+---------------------------------------------------------
+<!--                //bài 3-->
+<script>
+    let arrayLength = prompt("Nhập vào số lượng phần tử trong mảng: ");
+    let array = [];
+    for (let i = 0; i < arrayLength; i++) {
+        array[i] = +prompt(`Nhập vào phần tử thứ ${i + 1} :`);
+    }
+
+    function isPrimes(num) {
+        if (num < 2) {
+            return false
+        } else {
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    return false
+                }
+            }
+            return true
+        }
+
+    }
+
+    function sumPrime() {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (isPrimes(array[i]) && array[i] < 200) {
+                sum = sum + array[i];
+            }
+        }
+        return sum;
+    }
+
+    document.write(sumPrime())
+
+
+</script>
+---------------------------------------------------------
+<!--                        //bài 4-->
+
+</body>
+</html>
